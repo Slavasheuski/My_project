@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Книги {% endblock %}
+
+{% block content %}
+    <div class="Features">
+        <h1>Книги в базе данных</h1>
+
+        {% if books %}
+            {% for el in books %}
+                <div class="alert alert-warning">
+                    <h3>Название произведения: {{ el.title }}</h3>
+                    <p>Автор: {{ el.author }}</p>
+                    <p>Дата публикации: {{ el.date }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p> У вас нет записей! </p>
+        {% endif %}
+
+        {# Комментарий #}
+    </div>
+{% endblock %}

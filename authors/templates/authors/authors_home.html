@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Авторы {% endblock %}
+
+{% block content %}
+    <div class="Features">
+        <h1>Авторы в базе данных</h1>
+
+        {% if authors %}
+            {% for el in authors %}
+                <div class="alert alert-warning">
+                    <h3>Имя автора: {{ el.title }}</h3>
+                    <p>Дата рождения: {{ el.date_of_birthday }}</p>
+                    <p>Дата смерти: {{ el.date_of_death }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p> У вас нет записей! </p>
+        {% endif %}
+
+        {# Комментарий #}
+    </div>
+{% endblock %}

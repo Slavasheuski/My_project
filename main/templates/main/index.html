@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div class="Features">
+        <h4>На этом сайте вы найдете информацию о книгах и их авторах</h4>
+        <img src="{% static 'main/img/Library.jpg' %}" alt="Лого" weigh="400" height="400">
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Форма по добавлению книги {% endblock %}
+
+{% block content %}
+
+    <div class="Features">
+        <h1> Форма по добавлению книги </h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.author }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            
+            <button class="btn btn-success" type="submit">Добавить книгу</button>
+        </form>
+    </div>
+{% endblock %}
