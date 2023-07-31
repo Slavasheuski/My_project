@@ -1,0 +1,16 @@
+1.Set up the Python development environment. We recommend using a Python virtual environment.
+	Note: This has been tested against Django 4.0.10
+
+2.Assuming you have Python and VSCode (PyCharm), go to one of these applications (VSCode or PyCharm) and run the following commands in a terminal:
+	pip install -r requirements.txt
+	python manage.py makemigrations	
+	python manage.py migrate
+	python manage.py collectstatic
+	python manage.py test # Run the standard tests. These should all pass
+	python manage.py runserver
+
+3.Open a browser to http://127.0.0.1:8000/admin/ to open the admin site.
+
+4.Create a few test objects of each type.
+
+5.Open tab to http://127.0.0.1:8000 to see the main site, with your new objects.
